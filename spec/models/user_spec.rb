@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe User do
+  it {should have_many :answers}
+
   it 'creates a user' do
     user = FactoryGirl.create(:user)
     expect(User.all).to include(user)
