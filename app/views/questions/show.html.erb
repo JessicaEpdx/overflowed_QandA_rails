@@ -1,0 +1,7 @@
+<%= @question.title %>
+
+<ul>
+<% @question.answers.each do |answer| %>
+  <li><%= answer.description %> posted by: <%= User.find(answer.user_id).username %></li>
+<% end %>
+<ul>
