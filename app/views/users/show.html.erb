@@ -19,6 +19,7 @@
 </div>
 
 <div class="row">
+  <h5>Questions Asked By <%= current_user.username %></h5>
   <div class="col-sm-12">
     <% if @questions.any? %>
     <ul>
@@ -30,14 +31,5 @@
     <h5>You have not asked any questions yet! Don't be shy.</h5>
     <% end %>
 
-    <% if current_user.answers.any? %>
-    <ul>
-      <% current_user.answers.each do |answer| %>
-      <li><%= answer.description%></li>
-      <% end %>
-    </ul>
-    <% else %>
-    <h5>You have not answered yet! Don't be shy.</h5>
-    <% end %>
   </div>
 </div>
