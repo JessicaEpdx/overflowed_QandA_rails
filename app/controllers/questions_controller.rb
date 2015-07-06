@@ -8,5 +8,9 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    @question = current_user.questions.new
+  end
+
+  def create
   end
 end
