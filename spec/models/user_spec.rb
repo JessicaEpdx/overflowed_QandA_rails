@@ -15,4 +15,5 @@ describe User do
     user = FactoryGirl.build(:user, password: "", password_confirmation:"")
     expect(user.valid?).to eq(false)
   end
+
 end

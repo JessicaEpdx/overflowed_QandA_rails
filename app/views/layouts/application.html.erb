@@ -24,6 +24,11 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left special-color">
+            <% if current_user %>
+              <li><%=link_to 'Ask Away', new_user_question_path(current_user)%></li>
+            <% end %>
+          </ul>
           <ul class="nav navbar-nav navbar-right special-color">
             <li class="dropdown">
               <% if current_user %>
