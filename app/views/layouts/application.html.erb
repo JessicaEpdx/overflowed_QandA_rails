@@ -26,6 +26,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-left special-color">
             <% if current_user %>
+              <li><%=link_to 'Questions', user_questions_path(current_user)%></li>
               <li><%=link_to 'Ask Away', new_user_question_path(current_user)%></li>
             <% end %>
           </ul>

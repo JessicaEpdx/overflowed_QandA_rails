@@ -1,7 +1,20 @@
-<%= @question.title %>
+<div class="row">
+  <div class="col-sm-12 well">
+    <%= @question.title %>
+    <%= link_to 'Answer!', new_question_answer_path(@question, @answer) %>
 
-<ul>
-<% @question.answers.each do |answer| %>
-  <li><%= answer.description %> posted by: <%= User.find(answer.user_id).username %></li>
+  </div>
+
+</div>
+
+<% if @question.answers.any? %>
+  <ul>
+    <% @question.answers.each do |answer| %>
+      <li>
+        <%= answer.description %> posted by: <%= User.find(answer.user_id).username %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h5>There are no answers yet, do you have any advice!?</h5>
 <% end %>
-<ul>

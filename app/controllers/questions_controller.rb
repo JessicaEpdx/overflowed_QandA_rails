@@ -1,10 +1,10 @@
 class QuestionsController < ApplicationController
   def index
+    @all_questions = Question.all()
     @questions = current_user.questions
   end
 
   def show
-
     @question = Question.find(params[:id])
   end
 
