@@ -1,0 +1,13 @@
+<h2><%= current_user.username %></h2>
+
+<div class="row">
+  <div class="col-sm-5">
+    <img src ="<%= current_user.image %>" />
+  </div>
+
+  <div class="col-sm-7 well">
+    <h5><span class="profile-label">Email </span><%= current_user.email %></h5>
+    <h5><span class="profile-label">Length of Typical Cycle </span><%= current_user.cycle_length %></h5>
+    <h5><span class="profile-label">Menstrual Apparatus of Choice </span><%= current_user.preference %></h5>
+  </div>
+</div>
