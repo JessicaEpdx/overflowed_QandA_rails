@@ -1,11 +1,9 @@
-  <%= session[:user_id]%>
-
 <h1>Overflowed</h1>
 
 <h3>Got Period?
 Got Questions?
 <b>Well Bloody Hell</b>, We've Got Answers</h3>
 
-<%= link_to 'Sign Up', new_user_path %>
-<%= link_to 'Log In', log_in_path %>
-<%= link_to 'Log Out', log_out_path%>
+<% if !current_user %>
+  <%= link_to 'Sign Up', new_user_path %>
+<% end %>
