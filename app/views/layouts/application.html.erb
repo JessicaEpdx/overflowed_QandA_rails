@@ -44,6 +44,9 @@
               <ul class="dropdown-menu">
                 <% if current_user %>
                   <li><%= link_to "View Profile", user_path(current_user) %></li>
+                  <% if current_user.admin %>
+                    <li><%= link_to "Manage Accounts", users_path %></li>
+                  <% end %>
                   <li><%= link_to "Log Out", log_out_path %></li>
                 <% end %>
               </ul>

@@ -1,30 +1,30 @@
-<h2><%= current_user.username %></h2>
+<h2><%= @user.username %></h2>
 
 <div class="row">
   <div class="col-sm-5">
-    <img class="profile-image" src ="<%= current_user.image %>" />
+    <img class="profile-image" src ="<%= @user.image %>" />
   </div>
 
   <div class="col-sm-7 well">
-    <h5><span class="profile-label">Email </span><%= current_user.email %></h5>
-    <h5><span class="profile-label">Length of Typical Cycle </span><%= current_user.cycle_length %></h5>
-    <h5><span class="profile-label">Menstrual Apparatus of Choice </span><%= current_user.preference %></h5>
+    <h5><span class="profile-label">Email </span><%= @user.email %></h5>
+    <h5><span class="profile-label">Length of Typical Cycle </span><%= @user.cycle_length %></h5>
+    <h5><span class="profile-label">Menstrual Apparatus of Choice </span><%= @user.preference %></h5>
   </div>
 </div>
 
 <div class="row">
   <div class="col-sm-12">
-    <%= current_user.bio %>
+    <%= @user.bio %>
   </div>
 </div>
 
 <div class="row">
-  <h5>Questions Asked By <%= current_user.username %></h5>
+  <h5>Questions Asked By <%= @user.username %></h5>
   <div class="col-sm-12">
     <% if @questions.any? %>
     <ul>
       <% @questions.each do |question| %>
-      <li><%= link_to question.title, user_question_path(current_user, question) %></li>
+      <li><%= link_to question.title, user_question_path(@user, question) %></li>
       <% end %>
     </ul>
     <% else %>
