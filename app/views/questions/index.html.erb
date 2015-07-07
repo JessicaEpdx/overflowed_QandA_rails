@@ -2,7 +2,14 @@
 <% if @all_questions.any? %>
 <ul class="list-unstyled">
   <% @all_questions.each do |question| %>
-    <li><%= link_to question.title, user_question_path(current_user, question) %></li>
+    <li class="question">
+      <%= link_to question.title, user_question_path(current_user, question) %>
+      <% if current_user.admin %>
+        <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
+      :data => {:confirm => "Really really?",
+        :method => "delete"} %>
+      <% end %>
+      </li>
   <% end %>
 </ul>
 <% else %>

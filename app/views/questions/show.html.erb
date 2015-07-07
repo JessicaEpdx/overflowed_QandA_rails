@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <h2><%= @question.title %></h2>
+    <h2><%= @question.title %><span class="posted-by">by: <%=link_to User.find(@question.user_id).username, user_path(User.find(@question.user_id))%></span></h2>
+
     <p><%= @question.description %></p>
     <%= link_to 'Answer this Question!', new_question_answer_path(@question, @answer) %>
 
