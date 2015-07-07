@@ -31,6 +31,10 @@
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right special-color">
+            <li class="search"><%= form_tag("/questions", method: "get") do %>
+              <%= text_field_tag(:criteria, nil, :placeholder => 'Search') %>
+              <%= submit_tag("Search") %>
+              <% end %></li>
             <li class="dropdown">
               <% if current_user %>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

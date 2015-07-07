@@ -5,5 +5,13 @@ class Question < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :description
 
+  def self.Search(searchString)
+    result = self.basic_search(searchString)
+    if result.kind_of?(Array)
+      return result
+    else
+      return []
+    end
+  end
 
 end
