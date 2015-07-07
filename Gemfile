@@ -15,6 +15,7 @@ gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'bootstrap-sass', '~> 3.3.5'
 
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -23,6 +24,7 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'letter_opener'
 end
 
 group :test do

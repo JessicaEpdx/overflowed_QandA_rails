@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/overflowed/spec/features/log_out_path_spec.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/features/log_out_path_spec.rb": [
         1,
         null,
         1,
@@ -16,7 +16,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -70,14 +70,14 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/environment.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/overflowed/config/application.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/application.rb": [
         1,
         null,
         1,
@@ -114,12 +114,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/boot.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Guest/Desktop/overflowed/config/environments/test.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/environments/test.rb": [
         1,
         null,
         null,
@@ -163,7 +163,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -176,7 +176,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -185,18 +185,18 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -214,18 +214,18 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/overflowed/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -241,7 +241,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/factories.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/factories.rb": [
         1,
         1,
         1,
@@ -254,10 +254,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/config/routes.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/config/routes.rb": [
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -268,11 +272,11 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/helpers/application_helper.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/features/sign_in_path_spec.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/features/sign_in_path_spec.rb": [
         1,
         null,
         1,
@@ -293,7 +297,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/models/answer_spec.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/models/answer_spec.rb": [
         1,
         2,
         null,
@@ -302,7 +306,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/models/answer.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/models/answer.rb": [
         1,
         1,
         1,
@@ -312,7 +316,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/models/question_spec.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/models/question_spec.rb": [
         1,
         2,
         2,
@@ -321,7 +325,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/models/question.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/models/question.rb": [
         1,
         1,
         1,
@@ -332,7 +336,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -353,10 +357,14 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/models/user.rb": [
-        1,
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/models/user.rb": [
         1,
         1,
         1,
@@ -366,24 +374,52 @@
         null,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
         null,
         1,
         3,
         3,
-        null,
-        null,
-        1,
-        3,
-        3,
         2,
         null,
         null,
         null,
+        null,
+        null,
+        1,
+        4,
         null,
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/controllers/sessions_controller.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/mailers/user_mailer.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        4,
+        null,
+        4,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -411,26 +447,26 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null,
         1,
-        30,
+        32,
         null,
         null,
         1,
         null
       ],
-      "/Users/Guest/Desktop/overflowed/app/controllers/home_controller.rb": [
+      "/Users/Guest/Desktop/overflowed_QandA_rails/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1436220174
+    "timestamp": 1436288408
   }
 }

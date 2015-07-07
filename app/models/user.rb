@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_presence_of :password
   validates_confirmation_of :password
+
   before_save :encrypt_password
+  after_create :send_welcome_message
 
   has_many :questions
   has_many :answers
@@ -21,6 +23,10 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+
+  def send_welcome_message
+    UserMailer.signup_confirmation(self).deliver
   end
 
 end
