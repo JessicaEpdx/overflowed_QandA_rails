@@ -15,6 +15,10 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+ }
 
 .profile-label{
   font-size:17px;
@@ -23,4 +27,22 @@
 
 .profile-image{
   width:100%;
+}
+
+.answer{
+  margin:17px;
+  border: 1px solid grey;
+  padding:10px;
+  border-radius:10px;
+}
+
+.answer-description{
+  font-size:20px;
+
+}
+
+.posted-by{
+  font-style:italic;
+  color:slategrey;
+  padding-left:10px;
 }

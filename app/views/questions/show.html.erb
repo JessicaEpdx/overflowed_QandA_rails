@@ -3,15 +3,15 @@
     <h2><%= @question.title %></h2>
     <p><%= @question.description %></p>
     <%= link_to 'Answer this Question!', new_question_answer_path(@question, @answer) %>
-    
+
   </div>
 </div>
 
 <% if @question.answers.any? %>
-  <ul>
+  <ul class="list-unstyled">
     <% @question.answers.each do |answer| %>
-      <li>
-        <%= answer.description %> posted by: <%= User.find(answer.user_id).username %>
+      <li class="answer">
+        <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%= User.find(answer.user_id).username %></span>
       </li>
     <% end %>
   </ul>
