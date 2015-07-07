@@ -21,7 +21,7 @@ class AnswersController < ApplicationController
   def edit
     @question = Question.find(params[:question_id])
     @answer = Answer.find(params[:id])
-    if params[:format] == "up"
+    if params[:option] == "up"
       @answer.score += 1
       @answer.save
     else

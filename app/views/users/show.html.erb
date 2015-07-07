@@ -1,25 +1,26 @@
-<h2><%= @user.username %></h2>
+<h2 class="profile-title"><%= @user.username %></h2>
 
 <div class="row">
-  <div class="col-sm-5">
-    <img class="profile-image" src ="<%= @user.image %>" />
+  <div class="col-sm-5 profile-image" style="background-image:url(<%= @user.image %>)">
   </div>
 
-  <div class="col-sm-7 well">
-    <h5><span class="profile-label">Email </span><%= @user.email %></h5>
-    <h5><span class="profile-label">Length of Typical Cycle </span><%= @user.cycle_length %></h5>
-    <h5><span class="profile-label">Menstrual Apparatus of Choice </span><%= @user.preference %></h5>
+  <div class="col-sm-7">
+    <div class="well profile-info">
+      <h5><span class="profile-label">Email </span><%= @user.email %></h5>
+      <h5><span class="profile-label">Length of Typical Cycle </span><%= @user.cycle_length %></h5>
+      <h5><span class="profile-label">Menstrual Apparatus of Choice </span><%= @user.preference %></h5>
+    </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-12 profile-bio">
     <%= @user.bio %>
   </div>
 </div>
 
-<div class="row">
-  <h5>Questions Asked By <%= @user.username %></h5>
+<div class="profile-questions row">
+  <h5><span class="username"><%= @user.username %></span> Has Asked</h5>
   <div class="col-sm-12">
     <% if @questions.any? %>
     <ul>
@@ -28,7 +29,7 @@
       <% end %>
     </ul>
     <% else %>
-    <h5>You have not asked any questions yet! Don't be shy.</h5>
+    <h5>Nothing yet! Don't be shy.</h5>
     <% end %>
 
   </div>
