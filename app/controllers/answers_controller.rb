@@ -21,8 +21,13 @@ class AnswersController < ApplicationController
   def edit
     @question = Question.find(params[:question_id])
     @answer = Answer.find(params[:id])
-    @answer.score += 1
-    @answer.save
+    if params[:format] == "up"
+      @answer.score += 1
+      @answer.save
+    else
+      @answer.score -= 1
+      @answer.save
+    end
     redirect_to question_path(@question)
   end
 
