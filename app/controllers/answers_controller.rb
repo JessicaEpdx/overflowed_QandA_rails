@@ -18,6 +18,14 @@ class AnswersController < ApplicationController
     end
   end
 
+  def edit
+    @question = Question.find(params[:question_id])
+    @answer = Answer.find(params[:id])
+    @answer.score += 1
+    @answer.save
+    redirect_to question_path(@question)
+  end
+
   private
   def answer_params
     params.require(:answer).permit(:description)

@@ -18,7 +18,10 @@
   <ul class="list-unstyled">
     <% @question.answers.each do |answer| %>
       <li class="answer">
-        <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%=link_to User.find(answer.user_id).username, user_path(User.find(answer.user_id)) %></span>
+        <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%=link_to User.find(answer.user_id).username, user_path(User.find(answer.user_id)) %>
+           <br />Rating: <%= answer.score %>
+           <%= link_to image_tag("thumbs_up.svg"), edit_question_answer_path(@question, answer), class:"delete"%>
+        </span>
       </li>
     <% end %>
   </ul>
