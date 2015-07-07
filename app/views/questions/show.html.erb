@@ -11,7 +11,7 @@
   <ul class="list-unstyled">
     <% @question.answers.each do |answer| %>
       <li class="answer">
-        <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%= User.find(answer.user_id).username %></span>
+        <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%=link_to User.find(answer.user_id).username, user_path(User.find(answer.user_id)) %></span>
       </li>
     <% end %>
   </ul>
