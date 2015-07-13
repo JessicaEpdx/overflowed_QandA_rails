@@ -14,10 +14,6 @@
   </div>
 </div>
 
-<% if @question.answers.any? %>
-  <ul class="list-unstyled answers">
-
-  </ul>
-<% else %>
-  <h5>There are no answers yet, do you have any advice!?</h5>
-<% end %>
+<ul class="list-unstyled answers">
+  <%= render 'answers/answer' %>
+</ul>
