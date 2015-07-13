@@ -10,7 +10,7 @@
   <ul class="list-unstyled">
     <% @all_questions.each do |question| %>
     <li class="question">
-      <%= link_to question.title, user_question_path(current_user, question) %>
+      <%= link_to question.title, question_path(question) %>
       <% if current_user.admin %>
       <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
       :data => {:confirm => "Really really?",

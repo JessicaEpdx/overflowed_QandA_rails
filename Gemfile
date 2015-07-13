@@ -14,6 +14,7 @@ gem 'textacular', '~> 3.0'
 gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'pry'
 
 
 group :development, :test do

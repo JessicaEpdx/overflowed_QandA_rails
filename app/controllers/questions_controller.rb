@@ -11,13 +11,14 @@ class QuestionsController < ApplicationController
 
   def new
     @question = current_user.questions.new
+    @categories = Category.all()
   end
 
   def create
     @question = current_user.questions.new(question_params)
     if @question.save
       flash[:notice] = "Great Question!"
-      redirect_to user_questions_path
+      redirect_to questions_path
     else
       flash[:alert] = "Sorry, try again."
       render :new
@@ -35,6 +36,6 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:title, :description)
+    params.require(:question).permit(:title, :description, :category_id)
   end
 end

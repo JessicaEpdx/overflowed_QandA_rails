@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <h2><%= @question.title %><span class="posted-by">
+    <h2><%= @question.title %>
+      <span class="posted-by">
       <% if User.exists?(@question.user_id) %>
         by: <%=link_to User.find(@question.user_id).username, user_path(User.find(@question.user_id))%>
       <% else %>
@@ -10,6 +11,8 @@
 
     <p><%= @question.description %></p>
     <%= link_to 'Answer this Question!', new_question_answer_path(@question, @answer), :id => "add-answer", remote: true %>
+
+    <p><%= Category.find(@question.category_id).name %></p>
 
   </div>
 </div>
