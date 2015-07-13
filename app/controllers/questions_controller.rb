@@ -1,8 +1,9 @@
 class QuestionsController < ApplicationController
   def index
-    @all_questions = Question.all()
+    @all_questions = Question.all
     @questions = current_user.questions
     @results = Question.search(params[:criteria])
+    @categories = Category.all
   end
 
   def show
@@ -15,7 +16,9 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    category = Category.find(params[:question][:category_id])
     @question = current_user.questions.new(question_params)
+    @question.category_id = category.id
     if @question.save
       flash[:notice] = "Great Question!"
       redirect_to questions_path
@@ -36,6 +39,6 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:title, :description, :category_id)
+    params.require(:question).permit(:title, :description)
   end
 end
