@@ -1,13 +1,3 @@
 <h1>What's your question?</h1>
-<%=form_for [current_user, @question] do |f|%>
-<div class="form-group">
-  <div class="form-group">
-    <%=f.label :title %>
-    <%=f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%=f.label :description %>
-    <%=f.text_field :description, class: "form-control" %>
-  </div>
-  <%=f.submit 'Ask Question', :class => "btn btn-info" %>
-<%end%>
+
+<%= render 'form' %>

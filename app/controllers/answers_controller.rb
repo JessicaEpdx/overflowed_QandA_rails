@@ -11,10 +11,13 @@ class AnswersController < ApplicationController
     if @answer.save
       current_user.answers.push(@answer)
       flash[:notice] = "Great Answer!"
-      redirect_to question_path(@question)
-    else
-      flash[:alert] = "Wrong!"
-      render :new
+      respond_to do |format|
+        format.html { redirect_to questions_path}
+        format.js
+      end
+      else
+        flash[:alert] = "Wrong!"
+        render :new
     end
   end
 
