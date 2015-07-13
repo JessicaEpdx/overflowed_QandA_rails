@@ -1,1 +1,9 @@
-<h1>here</h1>
+<h1><%= @category.name %></h1>
+
+<% if @category.questions.any? %>
+  <% @category.questions.each do |question| %>
+    <%= question.title %>
+  <% end %>
+<% else %>
+  <h5>There are no questions in this category yet!</h5>
+<% end %>
