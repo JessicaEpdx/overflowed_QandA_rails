@@ -12,8 +12,10 @@
     <p><%= @question.description %></p>
     <%= link_to 'Answer this Question!', new_question_answer_path(@question, @answer), :id => "add-answer", remote: true %>
 
-    <p><%= Category.find(@question.category_id).name %></p>
-
+    <% if @question.category_id %>
+      <p><%= Category.find(@question.category_id).name %></p>
+    <% end %>
+    
   </div>
 </div>
 

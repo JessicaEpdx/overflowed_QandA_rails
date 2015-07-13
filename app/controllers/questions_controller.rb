@@ -16,14 +16,19 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    category = Category.find(params[:question][:category_id])
     @question = current_user.questions.new(question_params)
-    @question.category_id = category.id
-    if @question.save
-      flash[:notice] = "Great Question!"
-      redirect_to questions_path
+    if params[:question][:category_id] != ""
+      category = Category.find(params[:question][:category_id])
+      @question.category_id = category.id
+      if @question.save
+        flash[:notice] = "Great Question!"
+        redirect_to questions_path
+      else
+        flash[:alert] = "Sorry, try again."
+        render :new
+      end
     else
-      flash[:alert] = "Sorry, try again."
+      flash[:alert] = "You must choose a category."
       render :new
     end
   end

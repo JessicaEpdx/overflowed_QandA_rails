@@ -1,9 +1,18 @@
 <h1><%= @category.name %></h1>
 
 <% if @category.questions.any? %>
-  <% @category.questions.each do |question| %>
-    <%= question.title %>
-  <% end %>
+  <ul class="list-unstyled">
+    <% @category.questions.each do |question| %>
+      <li class="question">
+        <%= link_to question.title, question_path(question) %>
+        <% if current_user.admin %>
+        <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
+        :data => {:confirm => "Really really?",
+          :method => "delete"} %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
 <% else %>
   <h5>There are no questions in this category yet!</h5>
 <% end %>
