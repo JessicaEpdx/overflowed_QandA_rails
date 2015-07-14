@@ -36,6 +36,26 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
+  def update
+    @question = Question.find(params[:id])
+    @question.update(question_params)
+    if params[:question][:category_id] != ""
+      category = Category.find(params[:question][:category_id])
+      @question.category_id = category.id
+      if @question.save
+        flash[:notice] = "Your Question has been updated!"
+        redirect_to question_path(@question)
+      else
+        flash[:alert] = "You must have a title, description, and category"
+        render :new
+      end
+    else
+      flash[:alert] = "You must choose a category!"
+      render :new
+    end
+
+  end
+
   def destroy
     @question = Question.find(params[:id])
     @question.answers.each do |answer|
