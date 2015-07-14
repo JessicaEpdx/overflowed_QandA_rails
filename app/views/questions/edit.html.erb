@@ -1,1 +1,5 @@
-<%= render 'form' %>
+<% if @question.user_id == current_user.id %>
+  <%= render 'form' %>
+<% else %>
+  <h2>Access Denied</h2>
+<% end %>
