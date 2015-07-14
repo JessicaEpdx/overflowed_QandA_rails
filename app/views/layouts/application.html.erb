@@ -25,8 +25,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-left special-color">
+            <li><%=link_to 'Questions', questions_path%></li>
+
             <% if current_user %>
-              <li><%=link_to 'Questions', questions_path%></li>
               <li><%=link_to 'Ask Away', new_question_path%></li>
             <% end %>
           </ul>

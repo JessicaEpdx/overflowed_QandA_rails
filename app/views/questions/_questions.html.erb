@@ -1,19 +1,22 @@
 <% if @all_questions.any? %>
-<ul class="list-unstyled">
-  <% @all_questions.each do |question| %>
-  <li class="question">
-    <%= link_to question.title, question_path(question) %>
-    <% if current_user.admin %>
-    <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
-    :data => {:confirm => "Really really?",
-      :method => "delete"} %>
-      <% if current_user.id = question.user_id %>
-        | <%= link_to image_tag("pencil.png"), edit_question_path(question), :class => 'delete' %>
-      <% end %>
+  <ul class="list-unstyled">
+    <% @all_questions.each do |question| %>
+    <li class="question">
+      <%= link_to question.title, question_path(question) %>
+      <% if current_user %>
+        <% if current_user.admin %>
+          <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
+          :data => {:confirm => "Really really?",
+          :method => "delete"} %>
+        <% end %>
+        <% if current_user.id == question.user_id %>
+          <%= link_to image_tag("pencil.png"), edit_question_path(question), :class => 'delete' %>
+        <% end %>
       <% end %>
     </li>
-    <% end %>
+  <% end %>
   </ul>
+
   <% else %>
   <h5>You have not asked any questions yet! Don't be shy.</h5>
-  <% end %>
+<% end %>
