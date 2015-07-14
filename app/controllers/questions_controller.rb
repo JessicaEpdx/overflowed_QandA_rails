@@ -1,7 +1,6 @@
 class QuestionsController < ApplicationController
   def index
     @all_questions = Question.all
-    @questions = current_user.questions
     @results = Question.search(params[:criteria])
     @categories = Category.all
   end

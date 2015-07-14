@@ -1,5 +1,8 @@
 require 'simplecov'
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+
 SimpleCov.start
 
 RSpec.configure do |config|
@@ -11,4 +14,5 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
 end

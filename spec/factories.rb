@@ -8,4 +8,5 @@ FactoryGirl.define do
     password("bigtampons")
     password_confirmation("bigtampons")
   end
+
 end

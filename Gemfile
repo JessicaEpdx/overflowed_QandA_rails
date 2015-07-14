@@ -30,5 +30,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'poltergeist'
   gem 'simplecov', require: false
+  gem 'database_cleaner'
 end
