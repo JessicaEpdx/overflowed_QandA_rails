@@ -6,7 +6,7 @@
     <% if current_user.admin %>
     <%= link_to image_tag("trashcan.png"), question_path(question), :class => 'delete',
     :data => {:confirm => "Really really?",
-      :method => "delete"} %>
+      :method => "delete"} %> | <%= link_to image_tag("pencil.png"), edit_question_path(question), :class => 'delete' %>
       <% end %>
     </li>
     <% end %>

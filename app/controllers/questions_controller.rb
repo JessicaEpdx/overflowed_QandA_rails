@@ -32,6 +32,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
   def destroy
     @question = Question.find(params[:id])
     @question.answers.each do |answer|
