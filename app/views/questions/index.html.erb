@@ -9,18 +9,20 @@
 
 
 <div class="col-sm-9">
+
   <div class="edit-question">
   </div>
+
   <% if @results.any? %>
-  <h3>Search Results</h3>
-  <ul class= "list-unstyled">
-    <% @results.each do |result| %>
-      <li class="question"><%= link_to result.title, question_path(result) %></li>
-    <% end %>
-  </ul>
+    <h3>Search Results</h3>
+    <ul class= "list-unstyled">
+      <% @results.each do |result| %>
+        <li class="question"><%= link_to result.title, question_path(result) %></li>
+      <% end %>
+    </ul>
   <% else %>
-  <div class="questions">
-    <%= render 'questions' %>
+    <div class="questions">
+      <%= render 'questions' %>
     </div>
   <% end %>
 

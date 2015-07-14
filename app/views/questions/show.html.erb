@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <h2><%= @question.title %>
+    <h2 class="question-title"><%= @question.title %>
       <span class="posted-by">
       <% if User.exists?(@question.user_id) %>
         by: <%=link_to User.find(@question.user_id).username, user_path(User.find(@question.user_id))%>
@@ -8,11 +8,11 @@
         by: Deleted User
       <% end %>
     </span></h2>
-    <p><%= @question.description %></p>
+    <p class="question-category">Category: <%= Category.find(@question.category_id).name %></p>
+
+    <h4 class="question-description"><%= @question.description %></h4>
+
     <% if current_user %>
-      <% if @question.category_id %>
-        <p><%= Category.find(@question.category_id).name %></p>
-      <% end %>
       <% if current_user.id == @question.user_id %>
         <%= link_to image_tag("pencil.png"), edit_question_path(@question), :class => 'delete', remote: true %>
       <% end %>
@@ -22,9 +22,9 @@
   </div>
 </div>
 
+<div class="edit-question">
+</div>
+
 <ul class="list-unstyled answers">
   <%= render 'answers/answer' %>
 </ul>
-
-<div class="edit-question">
-</div>

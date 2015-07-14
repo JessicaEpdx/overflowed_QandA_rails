@@ -2,10 +2,10 @@
   <% @question.answers.each do |answer| %>
     <li class="answer">
       <span class="answer-description"><%= answer.description %></span><span class="posted-by"> posted by: <%=link_to User.find(answer.user_id).username, user_path(User.find(answer.user_id)) %>
-
-        <br />Rating: <%= link_to image_tag("thumbs_down.svg"), edit_question_answer_path(@question, answer, :option => "down"), class:"delete" %>
-          <%= answer.score %>
-         <%= link_to image_tag("thumbs_up.svg"), edit_question_answer_path(@question, answer, :option => "up"), class:"delete" %>
+        <br />
+        Rating: <%= link_to image_tag("thumbs_down.svg"), edit_question_answer_path(@question, answer, :option => "down"), class:"delete" %>
+        <%= answer.score %>
+        <%= link_to image_tag("thumbs_up.svg"), edit_question_answer_path(@question, answer, :option => "up"), class:"delete" %>
       </span>
     </li>
   <% end %>
