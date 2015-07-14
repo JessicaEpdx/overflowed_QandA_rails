@@ -10,7 +10,7 @@
           :method => "delete"} %>
         <% end %>
         <% if current_user.id == question.user_id %>
-          <%= link_to image_tag("pencil.png"), edit_question_path(question), :class => 'delete' %>
+          <%= link_to image_tag("pencil.png"), edit_question_path(question), :class => 'delete', remote: true %>
         <% end %>
       <% end %>
     </li>

@@ -11,5 +11,5 @@
   <div class="form-group">
     <%= select("question", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'}) %>
   </div>
-  <%=f.submit 'Ask Question', :class => "btn btn-info" %>
+  <%=f.submit :class => "btn btn-info" %>
 <%end%>
