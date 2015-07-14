@@ -15,9 +15,12 @@ class AnswersController < ApplicationController
         format.html { redirect_to questions_path}
         format.js
       end
-      else
-        flash[:alert] = "Wrong!"
-        render :new
+    else
+      flash[:notice] = "Please enter a description!"
+      respond_to do |format|
+        format.html { redirect_to questions_path}
+        format.js { render "fail" }
+      end
     end
   end
 

@@ -1,3 +1,4 @@
 $("#new_answer").remove();
 $("#add-answer").show();
 $(".answers").html('<%= j render(@answer) %>');
+$(".notice").html("<%= flash[:notice] %>");

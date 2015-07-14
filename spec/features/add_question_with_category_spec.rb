@@ -10,7 +10,7 @@ describe 'adding a question with a category path' do
   visit new_question_path
   fill_in "question_title", :with => "New Question"
   fill_in "question_description", :with => "New Description"
-  click_on "Ask Question"
+  click_on "Create Question"
   expect(page).to have_content "You must choose a category."
   end
 
@@ -25,7 +25,7 @@ describe 'adding a question with a category path' do
   fill_in "question_title", :with => "New Question"
   fill_in "question_description", :with => "New Description"
   select 'Birth Control'
-  click_on "Ask Question"
+  click_on "Create Question"
   expect(page).to have_content "New Question"
   end
 end
