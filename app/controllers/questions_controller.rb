@@ -44,7 +44,10 @@ class QuestionsController < ApplicationController
       @question.category_id = category.id
       if @question.save
         flash[:notice] = "Your Question has been updated!"
-        redirect_to question_path(@question)
+        respond_to do |format|
+          format.html { redirect_to question_path(@question)}
+          format.js
+        end
       else
         flash[:alert] = "You must have a title, description, and category"
         render :new
@@ -53,7 +56,6 @@ class QuestionsController < ApplicationController
       flash[:alert] = "You must choose a category!"
       render :new
     end
-
   end
 
   def destroy
